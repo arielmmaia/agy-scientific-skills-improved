@@ -1,0 +1,13 @@
+{
+  "name": "literature-extended",
+  "displayName": "Literature Extended",
+  "version": "1.0.0",
+  "author": "arielmmaia",
+  "repository": "https://github.com/arielmmaia/agy-scientific-skills-improved",
+  "description": "Extended scientific literature search via Semantic Scholar S2, Elsevier (Scopus & ScienceDirect), Springer Nature (Meta v2 & Open Access), CORE v3, and Ai2 Asta Scientific Corpus MCP.",
+  "suggestedPrompts": [
+    "Search Semantic Scholar and recommend papers related to DOI 10.1038/s41586-021-03819-2",
+    "Search Elsevier Scopus and retrieve ScienceDirect metadata for recent CRISPR base editing papers",
+    "Find open-access Nature/Springer JATS full text and CORE repository papers on protein folding"
+  ]
+}

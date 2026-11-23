@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "asta": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--quiet",
+        "scripts/asta_mcp_proxy.py"
+      ]
+    }
+  }
+}

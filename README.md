@@ -1,4 +1,27 @@
-# Science skills
+# Science skills (Improved Fork — `agy-scientific-skills-improved`)
+
+> **Fork additions:** This fork of [`google-deepmind/science-skills`](https://github.com/google-deepmind/science-skills) keeps all 40 upstream DeepMind skills intact under `skills/` and adds a self-contained Antigravity plugin under [`plugins/literature-extended/`](plugins/literature-extended/) expanding scientific literature search with **5 additional APIs/tools** following the same `uv run` + `polite-http` + `~/.env` `credentials` design:
+>
+> - **`literature-search-s2`** — Semantic Scholar Academic Graph & Recommendations API (`S2_API_KEY`)
+> - **`literature-search-elsevier`** — Elsevier Scopus Search, ScienceDirect Search v2 (`PUT`), Abstract Retrieval & Article Retrieval (`ELSEVIER_API_KEY`, optional `ELSEVIER_INSTTOKEN`)
+> - **`literature-search-springer`** — Springer Nature Meta API v2 & Open Access API including JATS XML full-text extraction (`SPRINGER_META_API_KEY`, `SPRINGER_OA_API_KEY`)
+> - **`literature-search-core`** — CORE API v3 open-access repository aggregator, full-text extraction, and redirect-safe PDF downloads (`CORE_API_KEY`)
+> - **`asta` MCP server** (`literature-extended_asta`) — Zero-secret local `uv run` stdio proxy (`plugins/literature-extended/scripts/asta_mcp_proxy.py`) bridging to Ai2's Asta Scientific Corpus MCP (`ASTA_API_KEY`)
+>
+> ### Installing `literature-extended` Alongside Antigravity's Official Modular Plugins
+>
+> Because Antigravity distributes DeepMind's official skills as separate domain plugins (`scientific-literature`, `chemistry`, `genomics`, `structural-biology`), install just `plugins/literature-extended/` into your global Antigravity plugins folder to avoid duplicating the official skills:
+>
+> ```bash
+> git clone https://github.com/arielmmaia/agy-scientific-skills-improved.git
+> cp -r agy-scientific-skills-improved/plugins/literature-extended ~/.gemini/config/plugins/literature-extended
+> ```
+>
+> All API keys are loaded automatically from `~/.env` (or project `.env`) via `python-dotenv` — no secrets are stored in this repository or in `mcp_config.json`. See [`plugins/literature-extended/README.md`](plugins/literature-extended/README.md) for full details.
+
+---
+
+# Science skills (Upstream Documentation)
 
 A collection of agent skills for scientific research tasks, spanning genomics,
 structural biology, literature search, and more.
